@@ -10,5 +10,5 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:MadDog-420/MetalArt.git master:gh-pages
+git push -f https://github.com/MadDog-420/MetalArt.git master:gh-pages
 cd -
