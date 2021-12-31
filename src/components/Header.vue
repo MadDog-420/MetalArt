@@ -13,7 +13,7 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto my-5 mb-lg-0">
+                    <ul class="navbar-nav me-auto my-5 my-lg-0">
                         <li class="nav-item"><router-link to="/" class="nav-link mx-3 text-white">INICIO</router-link></li>
                         <li class="nav-item"><router-link to="/about" class="nav-link mx-3 text-white">LA MARCA</router-link></li>
                         <li class="nav-item"><a href="#" class="nav-link disable mx-3 text-white">APRENDE</a></li>
