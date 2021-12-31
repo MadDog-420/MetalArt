@@ -1,5 +1,5 @@
 <template>
-    <div class="galeria-side-container position-fixed">
+    <div class="galeria-side-container">
         <div class="galeria-side bg-dark p-3">
             <router-link to="/gallery">
                 <span class="mx-2">GALERÍA</span>
@@ -21,12 +21,13 @@ export default {
 
 <style scoped>
 .galeria-side-container{
-    left: -49px;
+    position: sticky;
     z-index: 999;
-    top: calc(50% - 28px);
+    top: calc(100% - 55px);
 }
 .galeria-side{
-    transform: rotate(-90deg);
+    width: fit-content;
+    transform: rotate(-90deg) translate(45px, -46px);
 }
 .galeria-side a{
     display: flex;

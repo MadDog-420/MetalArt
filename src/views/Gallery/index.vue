@@ -55,20 +55,17 @@
         </div>
       </div>
     </div>
-    <Footer/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Footer from '@/components/Footer'
 import Banner from '@/components/Banner'
 import Slider from '@/views/Gallery/Slider'
 
 export default {
   name: 'Gallery',
   components: {
-    Footer,
     Banner,
     Slider
   },
@@ -76,6 +73,9 @@ export default {
 </script>
 
 <style scoped>
+.main{
+  margin-top: 0;
+}
 .row img{
   width: 100%;
   height: 100%;
@@ -116,5 +116,11 @@ export default {
 }
 .my-col > div:hover .center{
   color: white;
+}
+
+@media (max-width: 576px){
+  .main >.container-fluid{
+    margin-top: 55px;
+  }
 }
 </style>

@@ -35,20 +35,17 @@
         </div>
       </div>
     </div>
-    <Footer/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Footer from '@/components/Footer.vue'
 import Picture from '@/components/Picture.vue'
 import Banner from '@/components/Banner.vue'
 
 export default {
   name: 'About',
   components: {
-    Footer,
     Picture,
     Banner
   }
@@ -85,16 +82,15 @@ export default {
   max-width: 80%;
   margin: 30px auto;
 }
-@media (max-width: 576px){
-  p {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
+
+@media (max-width: 1232px) {
   .sub-gallery{
-    max-width: 99% !important;
+    max-width: 87%;
   }
-  .sub-gallery-container h3{
-    font-size: 30px;
+}
+@media (min-width: 992px) {
+  p{
+    font-size: 20px;
   }
 }
 @media (max-width: 768px){
@@ -110,14 +106,19 @@ export default {
     text-align: justify;
   }
 }
-@media (min-width: 992px) {
-  p{
-    font-size: 20px;
+@media (max-width: 576px){
+  p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
-}
-@media (max-width: 1232px) {
+  .main >.container-fluid{
+    margin-top: 55px;
+  }
   .sub-gallery{
-    max-width: 87%;
+    max-width: 99% !important;
+  }
+  .sub-gallery-container h3{
+    font-size: 30px;
   }
 }
 </style>

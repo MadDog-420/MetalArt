@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="home main">
         <div class="row">
             <div class="my-col col-sm-6">
                 <img src="..\assets\img\Enmascarar_grupo_15.png">
@@ -61,6 +61,9 @@ img{
     height: 100%;
     object-fit: cover;
     transition: all 4s linear;
+}
+.main{
+    margin-top: 0;
 }
 .center{
     margin: 0;

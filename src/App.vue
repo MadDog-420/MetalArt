@@ -1,17 +1,22 @@
 <template>
-  <Header v-if="hasHeader">
+  <div>
+    <Header v-if="hasHeader" />
     <GallerySide v-if="hasGallerySide" />
-  </Header>
-  <router-view v-slot="{ Component }">
-    <transition name="route" mode="out-in">
-      <component :is="Component"></component>
-    </transition>
-  </router-view>
+    <SocialSide v-if="hasGallerySide" />
+    <router-view v-slot="{ Component }">
+      <transition name="route" mode="out-in">
+        <component :is="Component"></component>
+      </transition>
+    </router-view>
+  </div>
+  <Footer v-if="hasFooter"/>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import GallerySide from '@/components/GallerySide.vue'
+import SocialSide from '@/components/SocialSide.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'app',
@@ -21,7 +26,9 @@ export default {
   }),
   components: {
     Header,
-    GallerySide
+    GallerySide,
+    SocialSide,
+    Footer
   },
   created() {
     window.addEventListener("resize", this.getDimensions);
@@ -37,7 +44,10 @@ export default {
       return this.$route.name !== 'Home'
     },
     hasGallerySide() {
-      return this.$route.name !== 'Gallery' && this.width > 576
+      return this.$route.name !== 'Gallery' && this.$route.name !== 'Home' && this.width > 576
+    },
+    hasFooter() {
+      return this.$route.name !== 'Home'
     }
   }
 }
@@ -49,7 +59,16 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  /*overflow: hidden;*/
+}
+
+.main{
+  margin-top: -168px;
   overflow: hidden;
+}
+
+.no-overflow{
+  overflow: auto;
 }
 
 #nav {
@@ -108,5 +127,11 @@ li{
 }
 .route-leave-active{
   transition: all 0.3s ease-in;
+}
+
+@media (max-width: 576px){
+  .main {
+    margin-top: 0;
+  }
 }
 </style>

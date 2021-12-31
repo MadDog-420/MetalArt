@@ -36,6 +36,11 @@ export default {
   display: flex;
   background-color: rgba(0,0,0,0.5);
 }
+.banner h1{
+  margin-top: 40px;
+  text-shadow: 1px 2px 3px black;
+}
+
 @media (max-width: 575px){
   .banner-cont {
     display: none;

@@ -1,6 +1,8 @@
 <template>
   <div class="contact main">
-    <Banner title='CONTACTO'/>
+    <Banner title='CONTACTO'>
+      <img src="@/assets/img/Enmascarar_grupo_24.png">
+    </Banner>
     <div class="container-fluid">
       <div class="row p-4">
           <div class="my-col col-sm-6 p-1 p-lg-5">
@@ -22,19 +24,16 @@
           </div>
       </div>
     </div>
-    <Footer/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Footer from '@/components/Footer.vue'
 import Banner from '@/components/Banner.vue'
 
 export default {
   name: 'Contact',
   components: {
-    Footer,
     Banner
   }
 }
@@ -48,5 +47,11 @@ export default {
 }
 .about img{
   background-color: rgba(81,81,81,1);
+}
+
+@media (max-width: 576px){
+  .main >.container-fluid{
+    margin-top: 55px;
+  }
 }
 </style>
