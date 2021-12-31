@@ -1,6 +1,5 @@
 <template>
   <div class="contact main">
-    <Header><GallerySide/></Header>
     <Banner title='CONTACTO'/>
     <div class="container-fluid">
       <div class="row p-4">
@@ -30,16 +29,12 @@
 <script>
 // @ is an alias to /src
 import Footer from '@/components/Footer.vue'
-import Header from '@/components/Header.vue'
-import GallerySide from '@/components/GallerySide.vue'
 import Banner from '@/components/Banner.vue'
 
 export default {
   name: 'Contact',
   components: {
-    Header,
     Footer,
-    GallerySide,
     Banner
   }
 }

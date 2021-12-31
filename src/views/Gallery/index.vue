@@ -1,6 +1,5 @@
 <template>
   <div class="gallery main">
-    <Header/>
     <Banner title='GALERÍA'>
       <img src="@/assets/img/Enmascarar_grupo_15.png">
     </Banner>
@@ -63,14 +62,12 @@
 <script>
 // @ is an alias to /src
 import Footer from '@/components/Footer'
-import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Slider from '@/views/Gallery/Slider'
 
 export default {
   name: 'Gallery',
   components: {
-    Header,
     Footer,
     Banner,
     Slider

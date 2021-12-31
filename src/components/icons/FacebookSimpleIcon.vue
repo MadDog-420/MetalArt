@@ -1,0 +1,3 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" width="10.604" height="19.799" viewBox="0 0 10.604 19.799"><g id="Grupo_83" data-name="Grupo 83" transform="translate(0 0)"><path id="Trazado_117" data-name="Trazado 117" d="M764.057,107.236l.549-3.584h-3.437v-2.325a1.791,1.791,0,0,1,2.02-1.936h1.563V96.341a19.047,19.047,0,0,0-2.775-.242c-2.831,0-4.682,1.716-4.682,4.823v2.731h-3.147v3.584h3.147V115.9h3.874v-8.662Z" transform="translate(-754.148 -96.099)" fill="#fff"/></g></svg>
+</template>

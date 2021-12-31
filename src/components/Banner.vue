@@ -36,4 +36,9 @@ export default {
   display: flex;
   background-color: rgba(0,0,0,0.5);
 }
+@media (max-width: 575px){
+  .banner-cont {
+    display: none;
+  }
+}
 </style>

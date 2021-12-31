@@ -1,4 +1,7 @@
 <template>
+  <Header v-if="hasHeader">
+    <GallerySide v-if="hasGallerySide" />
+  </Header>
   <router-view v-slot="{ Component }">
     <transition name="route" mode="out-in">
       <component :is="Component"></component>
@@ -7,8 +10,36 @@
 </template>
 
 <script>
+import Header from '@/components/Header.vue'
+import GallerySide from '@/components/GallerySide.vue'
+
 export default {
   name: 'app',
+  data: () => ({
+    width: document.documentElement.clientWidth,
+    height: document.documentElement.clientHeight
+  }),
+  components: {
+    Header,
+    GallerySide
+  },
+  created() {
+    window.addEventListener("resize", this.getDimensions);
+  },
+  methods: {
+    getDimensions() {
+      this.width = document.documentElement.clientWidth;
+      this.height = document.documentElement.clientHeight;
+    }
+  },
+  computed: {
+    hasHeader() {
+      return this.$route.name !== 'Home'
+    },
+    hasGallerySide() {
+      return this.$route.name !== 'Gallery' && this.width > 576
+    }
+  }
 }
 </script>
 
@@ -57,11 +88,6 @@ li{
   width: 100%;
   height: 400px;
   object-fit: cover;
-}
-
-.main .container-fluid{
-  padding: 2%;
-  margin: 0;
 }
 
 .gallery img{

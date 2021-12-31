@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="row" style="margin: -1px">
-            <div class="my-col col-sm-7 no-available">
+            <div class="my-col col-sm-5 no-available">
                 <img src="..\assets\img\Enmascarar_grupo_21.png">
                 <div class="darken-bg no-available">
                     <h3 class="center">APRENDE <br/><span class="coming-soon">(DISPONIBLE PRONTO)</span></h3>
@@ -134,5 +134,12 @@ footer p{
 }
 .coming-soon{
     font-size: .8rem;
+}
+@media (max-width: 575px){
+    .darken-bg{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+    }
 }
 </style>
