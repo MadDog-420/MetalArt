@@ -2,7 +2,7 @@
   <div>
     <Header v-if="hasHeader" />
     <GallerySide v-if="hasGallerySide" />
-    <SocialSide v-if="hasGallerySide" />
+    <SocialSide v-if="hasSocialSide" />
     <router-view v-slot="{ Component }">
       <transition name="route" mode="out-in">
         <component :is="Component"></component>
@@ -44,7 +44,10 @@ export default {
       return this.$route.name !== 'Home'
     },
     hasGallerySide() {
-      return this.$route.name !== 'Gallery' && this.$route.name !== 'Home' && this.width > 576
+      return this.$route.name !== 'Gallery' && this.$route.name !== 'Home' && this.width >= 576
+    },
+    hasSocialSide() {
+      return this.$route.name !== 'Home'
     },
     hasFooter() {
       return this.$route.name !== 'Home'
@@ -105,7 +108,7 @@ li{
 
 .banner-cont > img{
   width: 100%;
-  height: 400px;
+  height: 420px;
   object-fit: cover;
 }
 
@@ -131,7 +134,7 @@ li{
 
 @media (max-width: 576px){
   .main {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 }
 </style>

@@ -1,30 +1,30 @@
 <template>
   <div class="about main">
     <Banner title='LA MARCA'>
-      <img src="@/assets/img/Enmascarar_grupo_14.png">
+      <img src="@/assets/img/Enmascarar_grupo_14.jpg">
     </Banner>
     <div class="container-fluid">
-      <div class="first">
+      <First>
         <div class="row g-5 mt-md-4">
-          <div class="my-col col-md-6">
+          <div class="my-col col-12 col-md-6 pe-md-3 pe-lg-5">
               <img src="..\assets\img\la-marca-1-f.jpg">
           </div>
-          <div class="my-col col-md-6">
-            <div class="p-lg-5">
-              <h2 class="mb-md-5">Habilidad y creatividad</h2>
-              <p class="ms-md-2 ms-md-0 mt-2 mt-md-0 text-justify">Tuvo sus inicios en la década de los 80, a raíz del arte innato que corría por las venas del fundador de esta marca, Henry Pedro Paz Huamán, un artista arequipeño, que decidió comenzar a descubrir las maravillas que podían realizarse con la lámina de cobre y aluminio combinado con la habilidad de sus manos y creatividad de su mente.<br><br><br>La formación recibida fue de manera autodidacta, revelando su destreza de una manera impresionante, forjándose así una carrera artística tanto nacional e internacional.</p>
+          <div class="my-col col-12 col-md-6 ps-md-3 ps-lg-5">
+            <div class="col-12 d-flex flex-column">
+              <h2 class="mb-md-5 mt-md-auto">Habilidad y creatividad</h2>
+              <p class="ms-md-0 mt-2 mb-md-auto text-justify">Tuvo sus inicios en la década de los 80, a raíz del arte innato que corría por las venas del fundador de esta marca, Henry Pedro Paz Huamán, un artista arequipeño, que decidió comenzar a descubrir las maravillas que podían realizarse con la lámina de cobre y aluminio combinado con la habilidad de sus manos y creatividad de su mente.<br><br><br>La formación recibida fue de manera autodidacta, revelando su destreza de una manera impresionante, forjándose así una carrera artística tanto nacional e internacional.</p>
             </div>
           </div>
-          <div class="my-col col-md-6">
-            <div class="p-lg-5">
-              <p class="me-md-2 ms-md-0 mt-2 mt-md-0 text-justify">Es así que Metal Art logro varios premios fruto del esfuerzo y amor a esta destreza.<br>En la actualidad fue descubriendo e innovando con la experiencia de los años, nuevas técnicas y habilidades para mejorar este arte, que son plasmadas en cuadros realizados únicamente a mano, sin ningún tipo de matrices.<br><br><br>El reconocimiento de la gente es por la calidad del trabajo, marcando la diferencia en sus detalles, compromiso y pasión que le pone a cada uno de los ejemplares que realiza, logrando así una fusión del cobre, aluminio y el bronce en los últimos años, teniendo un resultado excelente para sus clientes, que ahora son también sus amigos.</p>
+          <div class="my-col col-12 col-md-6 pe-md-3 pe-lg-5">
+            <div class="col-12 d-flex flex-column">
+              <p class="ms-md-0 mt-2 my-md-auto text-justify">Es así que Metal Art logro varios premios fruto del esfuerzo y amor a esta destreza.<br>En la actualidad fue descubriendo e innovando con la experiencia de los años, nuevas técnicas y habilidades para mejorar este arte, que son plasmadas en cuadros realizados únicamente a mano, sin ningún tipo de matrices.<br><br><br>El reconocimiento de la gente es por la calidad del trabajo, marcando la diferencia en sus detalles, compromiso y pasión que le pone a cada uno de los ejemplares que realiza, logrando así una fusión del cobre, aluminio y el bronce en los últimos años, teniendo un resultado excelente para sus clientes, que ahora son también sus amigos.</p>
             </div>
           </div>
-          <div class="my-col col-md-6">
+          <div class="my-col col-12 col-md-6 ps-md-3 ps-lg-5">
               <img src="..\assets\img\la-marca-2-f.jpg">
           </div>
         </div>
-      </div>
+      </First>
       <div class="sub-gallery-container py-5 px-4">
         <h3 class="text-center mt-4 pb-4">Detalle, pasión y compromiso.</h3>
         <div class="row sub-gallery">
@@ -42,12 +42,14 @@
 // @ is an alias to /src
 import Picture from '@/components/Picture.vue'
 import Banner from '@/components/Banner.vue'
+import First from '@/components/First.vue'
 
 export default {
   name: 'About',
   components: {
     Picture,
-    Banner
+    Banner,
+    First
   }
 }
 </script>
@@ -58,8 +60,8 @@ export default {
   margin: 0;
 }
 .first{
-  max-width: 80%;
-  padding: 5em 0;
+  max-width: 70%;
+  padding: 3em 0;
   margin: 0 auto;
 }
 .row img{
@@ -112,7 +114,7 @@ export default {
     margin-right: 0 !important;
   }
   .main >.container-fluid{
-    margin-top: 55px;
+    margin-top: 70px;
   }
   .sub-gallery{
     max-width: 99% !important;

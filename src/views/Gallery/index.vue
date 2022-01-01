@@ -1,7 +1,7 @@
 <template>
   <div class="gallery main">
     <Banner title='GALERÍA'>
-      <img src="@/assets/img/Enmascarar_grupo_15.png">
+      <img src="@/assets/img/Enmascarar_grupo_15.jpg">
     </Banner>
     <!-- shows gallery by cat -->
     <div class="container-fluid" v-if="$route.params.cat">
@@ -9,51 +9,53 @@
     </div>
     <!-- shows when no cat param exists -->
     <div class="container-fluid" v-else>
-      <div class="row px-4">
-        <div class="my-col col-sm-6 p-3">
-          <div>
-            <img src="@/assets/img/Enmascarar_grupo_15.png">
-            <div class="lighten-bg">
-                <router-link to="/gallery/retratos">
-                  <h3 class="center">RETRATOS</h3>
-                </router-link>
+      <First>
+        <div class="row px-md-4">
+          <div class="my-col col-sm-6 p-3">
+            <div>
+              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
+              <div class="lighten-bg">
+                  <router-link to="/gallery/retratos">
+                    <h3 class="center">RETRATOS</h3>
+                  </router-link>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="my-col col-sm-6 p-3">
-          <div>
-            <img src="@/assets/img/Enmascarar_grupo_15.png">
-            <div class="lighten-bg">
-                <router-link to="/gallery/paisajes">
-                  <h3 class="center">PAISAJES</h3>
-                </router-link>
+          <div class="my-col col-sm-6 p-3">
+            <div>
+              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
+              <div class="lighten-bg">
+                  <router-link to="/gallery/paisajes">
+                    <h3 class="center">PAISAJES</h3>
+                  </router-link>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="my-col col-sm-6 p-3">
-          <div>
-            <img src="@/assets/img/Enmascarar_grupo_15.png">
-            <div class="lighten-bg">
-                <router-link to="/gallery/lugares">
-                  <h3 class="center">LUGARES<br/>EMBLEMÁTICOS</h3>
-                </router-link>
+          <div class="my-col col-sm-6 p-3">
+            <div>
+              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
+              <div class="lighten-bg">
+                  <router-link to="/gallery/lugares">
+                    <h3 class="center">LUGARES<br/>EMBLEMÁTICOS</h3>
+                  </router-link>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="my-col col-sm-6 p-3">
-          <div>
-            <img src="@/assets/img/Enmascarar_grupo_15.png">
-            <div class="lighten-bg">
-                <router-link to="/gallery/retratos">
-                  <h3 class="center">RETRATOS</h3>
-                </router-link>
+          <div class="my-col col-sm-6 p-3">
+            <div>
+              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
+              <div class="lighten-bg">
+                  <router-link to="/gallery/retratos">
+                    <h3 class="center">RETRATOS</h3>
+                  </router-link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </First>
     </div>
   </div>
 </template>
@@ -62,19 +64,21 @@
 // @ is an alias to /src
 import Banner from '@/components/Banner'
 import Slider from '@/views/Gallery/Slider'
+import First from '@/components/First'
 
 export default {
   name: 'Gallery',
   components: {
     Banner,
-    Slider
+    Slider,
+    First
   },
 }
 </script>
 
 <style scoped>
 .main{
-  margin-top: 0;
+  margin-top: -112px;
 }
 .row img{
   width: 100%;
@@ -120,7 +124,7 @@ export default {
 
 @media (max-width: 576px){
   .main >.container-fluid{
-    margin-top: 55px;
+    margin-top: 70px;
   }
 }
 </style>

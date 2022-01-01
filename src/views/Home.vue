@@ -2,7 +2,7 @@
     <div class="home main">
         <div class="row">
             <div class="my-col col-sm-6">
-                <img src="..\assets\img\Enmascarar_grupo_15.png">
+                <img src="..\assets\img\Enmascarar_grupo_15.jpg">
                 <div class="darken-bg">
                     <router-link to="/gallery">
                         <h3 class="center">GALERÍA</h3>
@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="my-col col-sm-6" style="margin: -1px">
-                <img src="..\assets\img\Enmascarar_grupo_14.png">
+                <img src="..\assets\img\Enmascarar_grupo_14.jpg">
                 <div class="darken-bg">
                     <router-link to="/about">
                     <div class="center-vertical">
@@ -22,13 +22,13 @@
         </div>
         <div class="row" style="margin: -1px">
             <div class="my-col col-sm-5 no-available">
-                <img src="..\assets\img\Enmascarar_grupo_21.png">
+                <img src="..\assets\img\Enmascarar_grupo_21.jpg">
                 <div class="darken-bg no-available">
                     <h3 class="center">APRENDE <br/><span class="coming-soon">(DISPONIBLE PRONTO)</span></h3>
                 </div>
             </div>
             <div class="my-col col-sm">
-                <img src="..\assets\img\Enmascarar_grupo_24.png">
+                <img src="..\assets\img\Enmascarar_grupo_24.jpg">
                 <div class="darken-bg">
                     <router-link to="/contact">
                         <h3 class="center">CONTACTO</h3>

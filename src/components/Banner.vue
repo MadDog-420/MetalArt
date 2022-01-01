@@ -24,7 +24,7 @@ export default {
 }
 .banner-cont{
   position: relative;
-  height: 400px;
+  height: 420px;
   overflow: hidden;
 }
 .banner{

@@ -38,6 +38,7 @@ export default {
     display: inline-flex;
     width: 20px;
     height: 20px;
+    margin: auto;
     line-height: 16px;
     overflow: hidden;
 }
