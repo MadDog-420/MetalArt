@@ -10,47 +10,14 @@
     <!-- shows when no cat param exists -->
     <div class="container-fluid" v-else>
       <First>
-        <div class="row px-md-4">
-          <div class="my-col col-sm-6 p-3">
+        <div class="row gx-3 px-md-4">
+          <div class="my-col col-6 col-md-4 py-2" v-for="item in items" :key="item.id">
             <div>
-              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
+              <img :src="'https://drive.google.com/uc?id='+item.id">
               <div class="lighten-bg">
-                  <router-link to="/gallery/retratos">
-                    <h3 class="center">RETRATOS</h3>
-                  </router-link>
-              </div>
-            </div>
-          </div>
-
-          <div class="my-col col-sm-6 p-3">
-            <div>
-              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
-              <div class="lighten-bg">
-                  <router-link to="/gallery/paisajes">
-                    <h3 class="center">PAISAJES</h3>
-                  </router-link>
-              </div>
-            </div>
-          </div>
-
-          <div class="my-col col-sm-6 p-3">
-            <div>
-              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
-              <div class="lighten-bg">
-                  <router-link to="/gallery/lugares">
-                    <h3 class="center">LUGARES<br/>EMBLEMÁTICOS</h3>
-                  </router-link>
-              </div>
-            </div>
-          </div>
-
-          <div class="my-col col-sm-6 p-3">
-            <div>
-              <img src="@/assets/img/Enmascarar_grupo_15.jpg">
-              <div class="lighten-bg">
-                  <router-link to="/gallery/retratos">
-                    <h3 class="center">RETRATOS</h3>
-                  </router-link>
+                <router-link to="/gallery/retratos">
+                  <h3 class="center">RETRATOS</h3>
+                </router-link>
               </div>
             </div>
           </div>
@@ -73,6 +40,17 @@ export default {
     Slider,
     First
   },
+  data() {
+    return {
+      items: [
+        { id: '1Qj0YNDeeIIeI4spiaE4bimLlaa0L9n_R' }, 
+        { id: '11jQhXZG07ITMHqWMotkCYmiDfKiZKkk1' },
+        { id: '1sk3bC9qYaP9xzbk5Zm8d2Q-R03jtt0Dg' },
+        { id: '1iHklI6nNJf7YQBYBBJzrdjUDrkkjM4G6' },
+        { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt' }
+      ]
+    }
+  }
 }
 </script>
 
@@ -112,11 +90,11 @@ export default {
   border: 2px solid #7a7a7a;
 }
 .my-col > div img{
-  opacity: 0;
+  opacity: 100;
   transition: all .5s linear;
 }
 .my-col > div:hover img{
-  opacity: 100;
+  opacity: 50;
 }
 .my-col > div:hover .center{
   color: white;

@@ -97,7 +97,7 @@ export default {
 }
 @media (max-width: 768px){
   .first{
-    padding: 2.5em 0;
+    padding: 1em 0;
     margin: 0 auto 3rem auto;
     max-width: 70%;
   }
@@ -114,7 +114,7 @@ export default {
     margin-right: 0 !important;
   }
   .main >.container-fluid{
-    margin-top: 70px;
+    margin-top: 80px;
   }
   .sub-gallery{
     max-width: 99% !important;
