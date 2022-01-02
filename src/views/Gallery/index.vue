@@ -10,13 +10,13 @@
     <!-- shows when no cat param exists -->
     <div class="container-fluid" v-else>
       <First>
-        <div class="row gx-3 px-md-4">
-          <div class="my-col col-6 col-md-4 py-2" v-for="item in items" :key="item.id">
+        <div class="gallery-row row gx-2 gx-md-3 px-md-4">
+          <div class="my-col col-6 col-md-4 py-1 py-md-2" v-for="item in items" :key="item.id">
             <div>
               <img :src="'https://drive.google.com/uc?id='+item.id">
               <div class="lighten-bg">
                 <router-link to="/gallery/retratos">
-                  <h3 class="center">RETRATOS</h3>
+                  <h4 class="center">RETRATOS</h4>
                 </router-link>
               </div>
             </div>
@@ -47,6 +47,7 @@ export default {
         { id: '11jQhXZG07ITMHqWMotkCYmiDfKiZKkk1' },
         { id: '1sk3bC9qYaP9xzbk5Zm8d2Q-R03jtt0Dg' },
         { id: '1iHklI6nNJf7YQBYBBJzrdjUDrkkjM4G6' },
+        { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt' },
         { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt' }
       ]
     }
@@ -57,6 +58,9 @@ export default {
 <style scoped>
 .main{
   margin-top: -112px;
+}
+.main .container-fluid{
+  padding: 0;
 }
 .row img{
   width: 100%;
@@ -84,6 +88,16 @@ export default {
   font-size: 1.3em;
   font-weight: normal;
   transition: all .5s linear;
+}
+.gallery-row{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 1000px;
+}
+.gallery-row .my-col{
+  display: inline-block;
+  flex-direction: column;
 }
 .my-col > div{
   position: relative;

@@ -122,5 +122,9 @@ export default {
   .sub-gallery-container h3{
     font-size: 30px;
   }
+  .sub-gallery > div{
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 </style>

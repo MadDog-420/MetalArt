@@ -23,4 +23,11 @@ export default {
     max-width: 70%;
   }
 }
+@media (max-width: 576px){
+  .first{
+    padding: 2.5em 0;
+    margin: 0 auto;
+    max-width: 85% !important;
+  }
+}
 </style>

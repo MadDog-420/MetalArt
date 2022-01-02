@@ -9,6 +9,7 @@
                 <ul>
                     <div class="row">
                         <div class="col col-6 col-sm-12"><li class="my-auto"><router-link to="/" class="nav-link text-white">Inicio</router-link></li></div>
+                        <div class="col col-6 col-sm-12"><li class="my-auto"><router-link to="/gallery" class="nav-link text-white">Galería</router-link></li></div>
                         <div class="col col-6 col-sm-12"><li class="my-auto"><router-link to="/about" class="nav-link text-white">La marca</router-link></li></div>
                         <div class="col col-6 col-sm-12"><li class="my-auto"><router-link to="/" class="nav-link disable text-white">Aprende</router-link></li></div>
                         <div class="col col-6 col-sm-12"><li class="my-auto"><router-link to="/contact" class="nav-link text-white">Contacto</router-link></li></div>

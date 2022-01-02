@@ -16,11 +16,11 @@
                     </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto my-5 my-lg-0">
-                        <li class="nav-item"><router-link to="/" class="nav-link mx-3 text-white">INICIO</router-link></li>
-                        <li class="nav-item"><router-link to="/about" class="nav-link mx-3 text-white">LA MARCA</router-link></li>
-                        <li class="nav-item"><a href="#" class="nav-link disable mx-3 text-white">APRENDE</a></li>
-                        <li class="nav-item"><router-link to="/contact" class="nav-link mx-3 text-white">CONTACTO</router-link></li>
+                    <ul class="navbar-nav me-auto my-md-5 my-lg-0">
+                        <li class="nav-item"><router-link to="/" class="nav-link mx-3 text-white">Inicio</router-link></li>
+                        <li class="nav-item"><router-link to="/about" class="nav-link mx-3 text-white">La Marca</router-link></li>
+                        <li class="nav-item"><a href="#" class="nav-link disable mx-3 text-white">Aprende</a></li>
+                        <li class="nav-item"><router-link to="/contact" class="nav-link mx-3 text-white">Contacto</router-link></li>
                     </ul>
                     <span class="navbar-text text-white text-center">
                         <a href="https://www.facebook.com/pages/category/Arts---Crafts-Store/Metal-Art-433001477462190/" target="_blank"><FacebookSimpleIcon /></a>
@@ -78,6 +78,7 @@ header{
 .nav-item{
     width: fit-content;
     margin: 0 auto;
+    text-transform: uppercase;
 }
 .navbar-gallery a{
     font-size: 1rem;
@@ -89,30 +90,34 @@ header{
     display: none;
 }
 
-header .nav-link{
+.navbar-gallery{
+    margin-left: auto;
+    margin-right: 1.5rem !important;
+}
+.navbar-nav .nav-link{
     width: fit-content;
     text-shadow: 1px 2px 3px black;
 }
-header .nav-link::after{
+.navbar-nav .nav-link::after{
     content: "";
     width: 0;
     display: block;
     height: 4px;
     transition: width .5s;
 }
-header .nav-link:hover::after, .router-link-active::after{
-    width: 100%;
+.navbar-nav .nav-link:hover::after, .router-link-active::after, .router-link-exact-active::after{
+    width: 100% !important;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
 }
-header .nav-link.disable{
+.navbar-nav .nav-link.disable{
     color: grey !important;
     cursor: auto;
 }
-header .nav-link.disable:hover::after{
+.navbar-nav .nav-link.disable:hover::after{
     width: 0;
 }
-header .navbar-text{
+.navbar-nav .navbar-text{
     display: none;
 }
 
@@ -176,14 +181,31 @@ a svg{
     fill: rgba(255,255,255,1);
 }
 
-header .galeria-side-container{
+.navbar-gallery .galeria-side-container{
     position: relative;
     z-index: 999;
     top: calc(100% - 55px);
 }
-header .galeria-side{
+.navbar-gallery .galeria-side{
     width: fit-content;
     transform: rotate(0) translate(0, 0) !important;
+    padding-right: .5rem !important;
+    padding-left: .5rem !important;
+    border: 1px solid #4A4A4A;
+    border-top: 0;
+    border-bottom: 0;
+}
+.navbar-gallery .galeria-side a{
+    font-size: 0.75rem;
+    line-height: 1.3rem;
+}
+.navbar-gallery .galeria-side .cuadrado{
+    width: 17px;
+    height: 17px;
+}
+.navbar-gallery .galeria-side .cuadrado .cuadrado-movil{
+    width: 6px;
+    height: 6px;
 }
 
 @media (max-width: 991px) {
@@ -205,20 +227,27 @@ header .galeria-side{
     }
 }
 @media (max-width: 576px) {
+    .navbar .container-fluid{
+        justify-content: start;
+    }
     .navbar-nav{
-        height: calc(100vh - 248.763px);
+        height: calc(100vh - 406.763px);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        margin: 7rem 0;
     }
     .navbar-brand{
+        padding-top: 0;
+        padding-bottom: 0;
         margin-right: 0px;
     }
     .navbar-text{
-        padding: 2rem 0;
+        padding-bottom: 5rem;
     }
     .nav-item{
         font-size: 30px;
+        text-transform: capitalize;
     }
 }
 
