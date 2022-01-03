@@ -115,7 +115,7 @@ header{
     cursor: auto;
 }
 .navbar-nav .nav-link.disable:hover::after{
-    width: 0;
+    width: 0 !important;
 }
 .navbar-nav .navbar-text{
     display: none;

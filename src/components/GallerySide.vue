@@ -4,8 +4,8 @@
             <router-link to="/gallery">
                 <span class="mx-2">GALERÍA</span>
                 <span class="cuadrado mx-2">
-                    <span class="p-1" style="width: 20px; border: 2px solid #fff; position: relative">
-                        <span class="cuadrado-movil" style="left: 4px;"></span><span class="cuadrado-movil" style="left: 18px;"></span>
+                    <span class="p-1">
+                        <span class="cuadrado-movil"></span><span class="cuadrado-movil"></span>
                     </span>
                 </span>
             </router-link>
@@ -43,20 +43,29 @@ export default {
     overflow: hidden;
 }
 .cuadrado>span{
+    width: 20px;
     display: flex;
+    border: 2px solid #fff; 
+    position: relative;
 }
 .cuadrado-movil{
-    width: 8px; 
-    height: 8px;
+    width: calc(100% - .5rem); 
+    height: calc(100% - .5rem);
     position: absolute;
     background-color: #fff;
     transition-duration: .5s;
     transition-property: all;
 }
-.galeria-side a:hover .cuadrado-movil:first-child{
-    left: -18px !important;
+.cuadrado-movil:first-child{
+    left: .25rem;
 }
-.galeria-side a:hover .cuadrado-movil:nth-child(2){
-    left: 4px !important;
+.cuadrado-movil:nth-child(2){
+    left: calc(100% + .5rem);
+}
+.galeria-side>a:hover .cuadrado-movil:first-child{
+    left: calc(-100% - .5rem);
+}
+.galeria-side>a:hover .cuadrado-movil:nth-child(2){
+    left: .25rem;
 }
 </style>
