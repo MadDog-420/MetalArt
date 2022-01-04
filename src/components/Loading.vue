@@ -54,15 +54,15 @@ export default {
     width: 100%;
     display: flex;
     position: relative;
-    border: 2px solid #000;
+    border: 2px solid #fff;
 } 
 .cuadrado-movil{
     width: calc(100% - 1rem); 
     height: calc(100% - 1rem);
     position: absolute;
-    background-color: #000;
+    background-color: #fff;
     /*transition: all 0.9s ease-out;*/
-    animation: example 2s infinite;
+    animation: slide 1s infinite;
 }
 .cuadrado-movil:first-child{
     left: .5rem;
@@ -77,7 +77,7 @@ export default {
 .galeria-side>div:hover .cuadrado-movil:nth-child(2){
     left: .5rem;
 } */
-@keyframes example {
+@keyframes slide {
     0%   {left: calc(100% + 1rem); opacity: 0;}
     19%  {left: .5rem; opacity: 1;}
     59%  {left: .5rem; opacity: 1;}

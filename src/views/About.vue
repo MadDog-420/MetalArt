@@ -50,7 +50,10 @@ export default {
     Picture,
     Banner,
     First
-  }
+  },
+  mounted() {
+    document.title = 'Metal Art | La Marca'
+  },
 }
 </script>
 

@@ -1,15 +1,4 @@
 <template>
-<!-- shows when no picture src param exists 
-    <div v-if=picture_src class="picture">
-        <img :src="'https://drive.google.com/uc?id='+picture_src" class="main-pic">
-        <button @click="toggleimg">{{ btntext }}</button>
-        <img class="loading" :src="imgsrc" width="400">
-    </div>
-    -- shows when no picture src param exists --
-    <div v-else>
-        <div class="no-image"></div>
-    </div>
--->
     <div v-if=picture_src class="picture">
         <img v-if=imgsrc class="main-pic" :src="imgsrc">
         <Loading v-else/>

@@ -51,6 +51,9 @@
 
 export default {
   name: 'Home',
+  mounted() {
+    document.title = 'Metal Art'
+  },
 }
 </script>
 

@@ -39,7 +39,10 @@ export default {
   components: {
     Banner,
     First
-  }
+  },
+  mounted() {
+    document.title = 'Metal Art | Contacto'
+  },
 }
 </script>
 
