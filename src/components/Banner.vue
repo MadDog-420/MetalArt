@@ -1,5 +1,5 @@
 <template>
-    <div class="banner-cont">
+    <div class="banner-cont d-none d-sm-block">
       <slot></slot>
       <div class="banner overflow-hidden text-center">
         <div class="col-md-5 m-auto">
@@ -39,11 +39,5 @@ export default {
 .banner h1{
   margin-top: 40px;
   text-shadow: 1px 2px 3px black;
-}
-
-@media (max-width: 575px){
-  .banner-cont {
-    display: none;
-  }
 }
 </style>

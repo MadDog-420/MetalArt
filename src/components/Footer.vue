@@ -17,10 +17,10 @@
                 </ul>
             </div>
             <div class="col col-12 col-sm-5 px-4 py-5 border-bottom">
-                <ul>
-                    <li class="my-auto">+51 959856919</li>
-                    <li class="my-auto">henry.paz.arte@gmail.com</li>
-                    <li class="my-auto">Calle Ampatacocha 217<br>Yanahuara - Arequipa - Perú</li>
+                <ul class="justify-content-between">
+                    <li>+51 959856919</li>
+                    <li>henry.paz.arte@gmail.com</li>
+                    <li>Calle Ampatacocha 217<br>Yanahuara - Arequipa - Perú</li>
                 </ul>
             </div>
             <div class="col col-12 d-sm-none pt-4">

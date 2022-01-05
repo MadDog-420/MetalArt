@@ -8,22 +8,33 @@
       <Slider/>
     </div>
     <!-- shows when no cat param exists -->
-    <div class="container-fluid bg-dark" v-else>
+    <div class="container-fluid" v-if="width >= 576">
+      <First class="category-nav">
+        <ul class="d-flex">
+          <li id="cat_1" v-on:click="selectorFirst">Cultural</li>
+          <li id="cat_2" v-on:click="selectorSecond">Religioso</li>
+          <li id="cat_1" v-on:click="selectorThird">Personalizado</li>
+          <span></span>
+        </ul>
+      </First>
+    </div>
+    <!-- shows when no cat param exists -->
+    <div class="container-fluid bg-dark" >
       <First>
-        <div class="gallery-row row gx-2 gx-md-3 px-md-4">
+        <div class="gallery-row row gx-2 gx-md-3">
           <div class="my-col col-6 col-md-4">
-            <div class="py-1 py-md-2" v-for="item in items_1" :key="item.id">
-              <GalleryPicture v-bind:picture_src="'https://drive.google.com/uc?id='+item.id" />
+            <div class="py-1 py-md-2" v-for="(item, index) in items_1" :key="item.id">
+              <GalleryPicture v-bind:picture_src="'https://drive.google.com/uc?id='+item.id" v-bind:item=item v-bind:index="index+'_1'" />
             </div>
           </div>
           <div class="my-col col-6 col-md-4">
-            <div class="py-1 py-md-2" v-for="item in items_2" :key="item.id">
-              <GalleryPicture v-bind:picture_src="'https://drive.google.com/uc?id='+item.id" />
+            <div class="py-1 py-md-2" v-for="(item, index) in items_2" :key="item.id">
+              <GalleryPicture v-bind:picture_src="'https://drive.google.com/uc?id='+item.id" v-bind:item=item v-bind:index="index+'_2'" />
             </div>
           </div>
           <div class="my-col d-none d-md-block col-md-4">
-            <div class="py-1 py-md-2" v-for="item in items_3" :key="item.id">
-              <GalleryPicture v-bind:picture_src="'https://drive.google.com/uc?id='+item.id" />
+            <div class="py-1 py-md-2" v-for="(item, index) in items_3" :key="item.id">
+              <GalleryPicture v-bind:picture_src="'https://drive.google.com/uc?id='+item.id" v-bind:item=item v-bind:index="index+'_3'" />
             </div>
           </div>
         </div>
@@ -54,14 +65,72 @@ export default {
     items: [],
     items_1: [],
     items_2: [],
-    items_3: []
+    items_3: [],
+    cult: [
+      { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1iHklI6nNJf7YQBYBBJzrdjUDrkkjM4G6', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1Sens-kQWpAeAvPlqdbLUdHlcKv288qQ1', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '12gZAx8N43Utx80sO6e8KOn87fiDmYnuQ', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1rmMSicVuk-bRJEE6p29XJCjBBOM4qYiw', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1XRu4F51c5zP6aSGLTGLBUSoTkpGPv16E', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1JY8LTMug-NyWTLqBKLwEnRY2--bYXGjn', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1sk3bC9qYaP9xzbk5Zm8d2Q-R03jtt0Dg', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1ogtcki2M_T0lURcV2iZnfRecBd0d4H8o', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '11jQhXZG07ITMHqWMotkCYmiDfKiZKkk1', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1DE1q7GPrCJcQVyVvz0p_kPO9guR_vpCq', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1-lTUR_H-yxeN6op0LNGVvRifKVvtbEsA', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1l8h4Rp7hF9srUZMAcHJxMvDOJTREyefX', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1rgA6vo_J2UVLPSn3_EKaPEkBocfO0y7H', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1g2JY0hpIX9vq-v1iLvRFLnCcYswOuprW', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1rmxZvE4iEB5Ft2Ib9x3O-ez2UR-7Kmuv', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '12SSedbOVDRH6uSzV9khw98aLGO-Rdfye', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '15PhSFt5QLAcE3jykraJel0sRLg5rUm_e', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1yoBGbeYSPk0GHxDS-s9VK4D8ERSsEqFU', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1ZWN9Pg0sKiamOCZkWgmCNcHxjF5gT7gI', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
+    ],
+    reli: [
+      { id: '1m0364e7MjMzyEcobA5UMDM4MI0T0xLBU', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1sFpA595MC_zhKV-Z2JkNtcmE4n1Jmm1G', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1MhHfU3bv6WThIGQMmQqe1J1e0fx_xBOy', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1qOcOtwV26IYGQgMW_r1ogqKtYUthWTcd', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '19rI7hXhS7a0fzuMM952MEiZe2Mp6xzYd', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1VYxcyhV8z9vYWIDlDOYlBUydWIAPTOMH', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1mE6RPwTIgKRnt9lzbU1n9uAbzmZOgtB5', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1ELytVP3pGK8GWCVPAq5BAtVoUiYupVmR', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1j3_DHWx1wMMNsHMW6e6zNrBWLFSdHsf7', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1uu182VbMgxVt58PiBRxADBUlLkhAmSNF', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1XE5bdHGAJWNQW3DouZk1eahC1_gWz3o7', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1RGYEWNSiSvA6LHU_WbJCA7BMs3PRzhJk', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1ydeur5MT_kv6nzUw-Eo-zwQ1LmiiizGg', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1-qNutpYBRBBd77rhgxTdnFCFza1RDMAk', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
+    ],
+    cust: [
+      { id: '129M79uu9E-O8jPA8HAib5BPPplJ2R6nA', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1PRkguvyKOmclEsQ4BeE0cWsh7UecP300', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1K3aAF239H75C4g4ZZ91Ikv1mH7mZUO0O', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1RjAMLSs27rB_TuY6rI89dMIVrJaosiXs', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1JedGg3tp6stJ_KqxMV2UdYaY9PJigx7Z', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1ux3u2-Y_sJXCKZbPKnKytAEwZGxyuMR_', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1dwI66zOQxk78Mm6C5F2PLEnkzxWbMkKd', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1Z0zWvheow3iSrEaRVIURW9zI5woGGb-W', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1rxhVt1OTXP-NraS7qE063sYCRiBhwNXr', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1wpZq4zqpwSKno4SBn6ix-GIZtat5nE2k', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1CqAh0E24RygOBgr_76tUmCuWNspketqE', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1bwT6jiqnU5LDBLdXQnXv1vPN8lsk5_Ty', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1FWbfH3Bmrddknoj_yCHdTxN3Ux5Y6uE6', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1z1uemMt5aBmeNBWByMmrsIlmhY72-SM6', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1hUfmdtGTRACLuVkbp9iKAnezMVKYWHzD', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1t_0dN_LM1NKoXYEYOmQotJgWTgIPSunl', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1iGdLjTetIhNOEsbdho5N9eDdfhB9jo0-', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1HXp5Q-rpcX_3DqVvGLvxrfrTn_L4qYl8', title: 'Lorem ipsum dolor sit', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
+    ]
   }),
   mounted() {
     document.title = 'Metal Art | Galería'
   },
   created() {
     window.addEventListener("resize", this.getDimensions),
-    this.setPicturesArray(1),
+    this.setPicturesArray('cult'),
     this.setColumns()
   },
   methods: {
@@ -71,50 +140,35 @@ export default {
       this.setColumns();
     },
     setPicturesArray(cat) {
-      if (cat === 1) {
-        this.items = [
-          { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt'},
-          { id: '1iHklI6nNJf7YQBYBBJzrdjUDrkkjM4G6'},
-          { id: '1Sens-kQWpAeAvPlqdbLUdHlcKv288qQ1'},
-          { id: '12gZAx8N43Utx80sO6e8KOn87fiDmYnuQ'},
-          { id: '1rmMSicVuk-bRJEE6p29XJCjBBOM4qYiw'},
-          { id: '1XRu4F51c5zP6aSGLTGLBUSoTkpGPv16E'},
-          { id: '1JY8LTMug-NyWTLqBKLwEnRY2--bYXGjn'},
-          { id: '1sk3bC9qYaP9xzbk5Zm8d2Q-R03jtt0Dg'},
-          { id: '1ogtcki2M_T0lURcV2iZnfRecBd0d4H8o'},
-          { id: '11jQhXZG07ITMHqWMotkCYmiDfKiZKkk1'},
-          { id: '1DE1q7GPrCJcQVyVvz0p_kPO9guR_vpCq'},
-          { id: '1-lTUR_H-yxeN6op0LNGVvRifKVvtbEsA'},
-          { id: '1l8h4Rp7hF9srUZMAcHJxMvDOJTREyefX'},
-          { id: '1rgA6vo_J2UVLPSn3_EKaPEkBocfO0y7H'},
-          { id: '1g2JY0hpIX9vq-v1iLvRFLnCcYswOuprW'},
-          { id: '1rmxZvE4iEB5Ft2Ib9x3O-ez2UR-7Kmuv'},
-          { id: '12SSedbOVDRH6uSzV9khw98aLGO-Rdfye'},
-          { id: '15PhSFt5QLAcE3jykraJel0sRLg5rUm_e'},
-          { id: '1yoBGbeYSPk0GHxDS-s9VK4D8ERSsEqFU'},
-          { id: '1ZWN9Pg0sKiamOCZkWgmCNcHxjF5gT7gI'}
-        ];
+      if (cat === 'cult') {
+        this.items = this.cult;
       }
-      if (cat === 2) {
-        this.items = [
-          { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt'},
-          { id: '1iHklI6nNJf7YQBYBBJzrdjUDrkkjM4G6'},
-          { id: '1Sens-kQWpAeAvPlqdbLUdHlcKv288qQ1'},
-          { id: '12gZAx8N43Utx80sO6e8KOn87fiDmYnuQ'},
-          { id: '1rmMSicVuk-bRJEE6p29XJCjBBOM4qYiw'},
-          { id: '1XRu4F51c5zP6aSGLTGLBUSoTkpGPv16E'}
-        ];
+      if (cat === 'reli') {
+        this.items = this.reli;
       }
-      if (cat === 3) {
-        this.items = [
-          { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt'},
-          { id: '1iHklI6nNJf7YQBYBBJzrdjUDrkkjM4G6'},
-          { id: '1Sens-kQWpAeAvPlqdbLUdHlcKv288qQ1'},
-          { id: '12gZAx8N43Utx80sO6e8KOn87fiDmYnuQ'},
-          { id: '1rmMSicVuk-bRJEE6p29XJCjBBOM4qYiw'},
-          { id: '1XRu4F51c5zP6aSGLTGLBUSoTkpGPv16E'}
-        ];
+      if (cat === 'cust') {
+        this.items = this.cust;
       }
+    },
+    selectorFirst: function(event) {
+      const elem = event.currentTarget;
+      document.querySelector('.category-nav span').setAttribute('style', 'left: 0; width: '+elem.offsetWidth+'px');
+      this.items = this.cult;
+      this.setColumns();
+    },
+    selectorSecond: function(event) {
+      const elem = event.currentTarget;
+      const left_size = document.querySelector('#cat_1').offsetWidth;
+      document.querySelector('.category-nav span').setAttribute('style', 'left: '+left_size+'px; width: '+elem.offsetWidth+'px');
+      this.items = this.reli;
+      this.setColumns();
+    },
+    selectorThird: function(event) {
+      const elem = event.currentTarget;
+      const left_size = document.querySelector('#cat_1').offsetWidth + document.querySelector('#cat_2').offsetWidth;
+      document.querySelector('.category-nav span').setAttribute('style', 'left: '+left_size+'px; width: '+elem.offsetWidth+'px');
+      this.items = this.cust;
+      this.setColumns();
     },
     setColumns(){
       if (this.width >= 768) {
@@ -146,6 +200,7 @@ export default {
 }
 .main .container-fluid{
   padding: 0;
+  margin-top: 70px;
 }
 .row img{
   width: 100%;
@@ -169,8 +224,31 @@ export default {
   color: #7a7a7a;
   font-size: 1.3em;
   font-weight: normal;
-  transition: all .5s linear;
+  transition: all .1s linear;
 }
+
+.category-nav{
+  padding: 0;
+}
+.category-nav ul{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.category-nav ul li{
+  padding: 2rem;
+  cursor: pointer;
+}
+.category-nav span{
+  width: 119px;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transition: all 0.5s linear;
+}
+
 .gallery-row{
   display: flex;
   flex-wrap: wrap;
@@ -193,9 +271,9 @@ export default {
   color: white;
 }
 
-@media (max-width: 576px){
+@media (min-width: 576px){
   .main >.container-fluid{
-    margin-top: 70px;
+    margin-top: 0px;
   }
 }
 </style>

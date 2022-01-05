@@ -1,7 +1,24 @@
 <template>
     <div v-if=picture_src class="picture">
-        <img v-if=imgsrc class="main-pic" :src="imgsrc">
+        <img v-if=imgsrc class="main-pic" :src="imgsrc" data-bs-toggle="modal" :data-bs-target="'#modal_'+index">
         <Loading v-else/>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" :id="'modal_'+index" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img v-if=imgsrc class="main-pic" :src="imgsrc">
+                    <div>
+                        <h3 class="mb-5">{{item.title}}</h3>
+                        <p v-for="text in item.sizes" :key="text">{{text}}</p>
+                        <p class="mt-5"><i>*El tamaño varía de acuerdo a las necesidades del cliente. Para tener más información comunicarse al +51 959856919 o enviar un mensaje de WhatsApp.</i></p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -13,7 +30,9 @@ export default {
         Loading
     },
     props: {
-        picture_src: String
+        picture_src: String,
+        item: Object,
+        index: String,
     },
     data: () => ({
         imgsrc: ""
@@ -74,5 +93,31 @@ export default {
 .picture .galeria-side .cuadrado .cuadrado-movil{
     width: 6px;
     height: 6px;
+}
+
+.modal-dialog{
+    max-width: calc(100% - 15px);
+}
+.modal-content{
+    background-color: rgba(0,0,0,0.6);
+}
+.modal-content .btn-close{
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 30px;
+    filter: brightness(0) invert(1);
+}
+.modal-content p, .modal-content h3{
+    color: white;
+}
+.modal-body{
+    display: flex;
+}
+.modal-body div{
+    max-width: 516px;
+    height: fit-content;
+    margin: auto 0;
+    padding: 40px;
 }
 </style>
