@@ -9,12 +9,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
-                    <img v-if=imgsrc class="main-pic" :src="imgsrc">
-                    <div>
-                        <h3 class="mb-5">{{item.title}}</h3>
-                        <p v-for="text in item.sizes" :key="text">{{text}}</p>
-                        <p class="mt-5"><i>*El tamaño varía de acuerdo a las necesidades del cliente. Para tener más información comunicarse al +51 959856919 o enviar un mensaje de WhatsApp.</i></p>
-                    </div>
+                    <First>
+                        <div class="row h-100">
+                            <div class="col d-flex picture-cont">
+                                <img v-if=imgsrc class="main-pic" :src="imgsrc">
+                            </div>
+                            <div class="col d-flex description-cont">
+                                <div class="description ps-lg-5 pe-0">
+                                    <h3 class="mb-5">{{item.title}}</h3>
+                                    <p v-for="text in item.sizes" :key="text">{{text}}</p>
+                                    <p class="mt-5"><i>*El tamaño varía de acuerdo a las necesidades del cliente. Para tener más información comunicarse al +51 959856919 o enviar un mensaje de WhatsApp.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </First>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             </div>
@@ -24,10 +32,12 @@
 
 <script>
 import Loading from '@/components/Loading.vue'
+import First from '@/components/First.vue'
 export default {
     name: 'GalleryPicture',
     components: {
-        Loading
+        Loading,
+        First
     },
     props: {
         picture_src: String,
@@ -35,9 +45,12 @@ export default {
         index: String,
     },
     data: () => ({
-        imgsrc: ""
+        imgsrc: "",
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight
     }),
     created() {
+        window.addEventListener("resize", this.getDimensions);
         if (this.picture_src !== "") {
             let myImage = new Image();
             myImage.src = this.picture_src;
@@ -46,6 +59,12 @@ export default {
             }
         } else {
             this.imgsrc = ""
+        }
+    },
+    methods: {
+        getDimensions() {
+            this.width = document.documentElement.clientWidth;
+            this.height = document.documentElement.clientHeight;
         }
     }
 }
@@ -59,6 +78,7 @@ export default {
     height: 255px;
 }
 .main-pic{
+    width: 100%;
     object-fit: contain;
     margin: auto;
     z-index: 99;
@@ -95,11 +115,19 @@ export default {
     height: 6px;
 }
 
+.modal{
+    background-color: rgba(0,0,0,0.8);
+}
 .modal-dialog{
-    max-width: calc(100% - 15px);
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
 }
 .modal-content{
-    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
 }
 .modal-content .btn-close{
     position: absolute;
@@ -111,13 +139,37 @@ export default {
 .modal-content p, .modal-content h3{
     color: white;
 }
+.modal-content p{
+    font-size: 13px;
+}
 .modal-body{
     display: flex;
+    padding: 30px 0;
 }
-.modal-body div{
-    max-width: 516px;
+.modal-body .description{
+    width: 406px;
     height: fit-content;
-    margin: auto 0;
-    padding: 40px;
+    margin: auto 0 auto auto;
+}
+.description-cont{
+    flex: 0;
+}
+
+@media (max-width: 992px){
+    .modal-body .description{
+        width: 346px;
+        height: fit-content;
+        margin: auto 0 auto auto;
+    }
+    .modal-body .col{
+        flex: 0 0 auto;
+    }
+    .modal-body .description{
+        margin: auto 0;
+        padding-top: 3rem;
+    }
+}
+@media (max-width: 768px){
+    
 }
 </style>
