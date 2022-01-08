@@ -68,25 +68,36 @@ export default {
     items_3: [],
     cult: [
       { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt', title: 'Máscara', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1iHklI6nNJf7YQBYBBJzrdjUDrkkjM4G6', title: 'Belleza azteca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1qBh7viEosa1xODuAgnCKFsGuI9zyxGm8', title: 'Belleza azteca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '1Sens-kQWpAeAvPlqdbLUdHlcKv288qQ1', title: 'Marinera norteña (Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '12gZAx8N43Utx80sO6e8KOn87fiDmYnuQ', title: 'Chalan', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1rmMSicVuk-bRJEE6p29XJCjBBOM4qYiw', title: 'Indio de Calca (Cusco Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1XRu4F51c5zP6aSGLTGLBUSoTkpGPv16E', title: 'Balza totora (Puno Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1JY8LTMug-NyWTLqBKLwEnRY2--bYXGjn', title: 'Desmochando', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1sk3bC9qYaP9xzbk5Zm8d2Q-R03jtt0Dg', title: 'Titicaca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1ogtcki2M_T0lURcV2iZnfRecBd0d4H8o', title: 'Fuerza', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '11jQhXZG07ITMHqWMotkCYmiDfKiZKkk1', title: 'Labrando', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1DE1q7GPrCJcQVyVvz0p_kPO9guR_vpCq', title: 'Chullpas de Sillustani', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1-lTUR_H-yxeN6op0LNGVvRifKVvtbEsA', title: 'Pelea de toros (Arequipa Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1l8h4Rp7hF9srUZMAcHJxMvDOJTREyefX', title: 'Lobos', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1rgA6vo_J2UVLPSn3_EKaPEkBocfO0y7H', title: 'Guerrero azteca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1g2JY0hpIX9vq-v1iLvRFLnCcYswOuprW', title: 'Moreno puneño', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1rmxZvE4iEB5Ft2Ib9x3O-ez2UR-7Kmuv', title: 'Fortaleza', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '12SSedbOVDRH6uSzV9khw98aLGO-Rdfye', title: 'Dualidad', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '15PhSFt5QLAcE3jykraJel0sRLg5rUm_e', title: 'Caballo peruano de paso', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1yoBGbeYSPk0GHxDS-s9VK4D8ERSsEqFU', title: 'Maravilla andina', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1ZWN9Pg0sKiamOCZkWgmCNcHxjF5gT7gI', title: 'Cultura', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
+      { id: '12gZAx8N43Utx80sO6e8KOn87fiDmYnuQ', title: 'Niña de Chivay', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1rmMSicVuk-bRJEE6p29XJCjBBOM4qYiw', title: 'Chalan', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1XRu4F51c5zP6aSGLTGLBUSoTkpGPv16E', title: 'Indio de Calca (Cusco Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1JY8LTMug-NyWTLqBKLwEnRY2--bYXGjn', title: 'Balza totora (Puno Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1sk3bC9qYaP9xzbk5Zm8d2Q-R03jtt0Dg', title: 'Desmochando', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1ogtcki2M_T0lURcV2iZnfRecBd0d4H8o', title: 'Titicaca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '11jQhXZG07ITMHqWMotkCYmiDfKiZKkk1', title: 'Fuerza', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1DE1q7GPrCJcQVyVvz0p_kPO9guR_vpCq', title: 'Labrando', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1-lTUR_H-yxeN6op0LNGVvRifKVvtbEsA', title: 'Chullpas de Sillustani', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1l8h4Rp7hF9srUZMAcHJxMvDOJTREyefX', title: 'Pelea de toros (Arequipa Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1rgA6vo_J2UVLPSn3_EKaPEkBocfO0y7H', title: 'Lobos', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1g2JY0hpIX9vq-v1iLvRFLnCcYswOuprW', title: 'Guerrero azteca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1rmxZvE4iEB5Ft2Ib9x3O-ez2UR-7Kmuv', title: 'Moreno puneño', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '12SSedbOVDRH6uSzV9khw98aLGO-Rdfye', title: 'Fortaleza', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '15PhSFt5QLAcE3jykraJel0sRLg5rUm_e', title: 'Dualidad', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1yoBGbeYSPk0GHxDS-s9VK4D8ERSsEqFU', title: 'Caballo peruano de paso', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1ZWN9Pg0sKiamOCZkWgmCNcHxjF5gT7gI', title: 'Maravilla andina', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1WAgboxUakGgQMRX1U2YU3YodayDx-lwo', title: 'Cultura', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+
+      { id: '1W9Z473NQrQFZSKSKJGybON5ZXD3KxU-P', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1h22xfyV9pk8E0IUcgeLFeRA6u5WcPARk', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1Ei5wV8o5wMaoxMNOVfnXNZ9d3_JEJofd', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1srh1WfUUvbxPOTe5rvxtsLpDumJCrdga', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '10fwQJ5p1QwZh0IiUtQoLMKI-9VR-TaFH', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '18TKgGqhL43Kdi0hjQdb1jMXIxEfrbbQU', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1-UW2YVV8Aau99EJramdGuM3fy8frUP-C', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1wRoKw6awzzGr2CRS361yYvd3bCgB-yPY', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1Ep7GLdTqMFEt2AEtE-va3GJ-4t-yl8gt', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
     ],
     reli: [
       { id: '1m0364e7MjMzyEcobA5UMDM4MI0T0xLBU', title: 'Jesús', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
@@ -102,7 +113,9 @@ export default {
       { id: '1XE5bdHGAJWNQW3DouZk1eahC1_gWz3o7', title: 'Señor de Huanca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '1RGYEWNSiSvA6LHU_WbJCA7BMs3PRzhJk', title: 'Señor de la Sentencia', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '1ydeur5MT_kv6nzUw-Eo-zwQ1LmiiizGg', title: 'Señor de la Misericordia', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1-qNutpYBRBBd77rhgxTdnFCFza1RDMAk', title: 'Virgen de Chapi', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
+      { id: '1-qNutpYBRBBd77rhgxTdnFCFza1RDMAk', title: 'Virgen de Chapi', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+
+      { id: '1p7Xhm0fnFUAkYIOfy9T_8VlpjddpcvEZ', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
     ],
     cust: [
       { id: '129M79uu9E-O8jPA8HAib5BPPplJ2R6nA', title: 'Escalera de Jacob', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
@@ -123,7 +136,15 @@ export default {
       { id: '1cZXAQWdAt75sEhTmTSpLzsHsqUUb5FX4', title: 'Camión minero personalizado', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '1t_0dN_LM1NKoXYEYOmQotJgWTgIPSunl', title: 'Estrella del abogado', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '1iGdLjTetIhNOEsbdho5N9eDdfhB9jo0-', title: 'Logotipo de hotel', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
-      { id: '1HXp5Q-rpcX_3DqVvGLvxrfrTn_L4qYl8', title: 'Escudo de colegio de abogados de Arequipa', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']}
+      { id: '1HXp5Q-rpcX_3DqVvGLvxrfrTn_L4qYl8', title: 'Escudo de colegio de abogados de Arequipa', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+
+      { id: '1vxso2ud4CMNPjtSVGocP2aK9kty2Ib-R', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '10C2hThgsNOOMJPq0MoKJqCoof8F46j_C', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '12zH-ST92-_nTJBgy3rnfadun5HChMLjW', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1GA2tNQlOqZbhK1EdpIPqEWL8OQLtgGA6', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1u-SQBX6Ah5V2FB404Y6tPWA4RlFXczcs', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1cZvbiJIaP4HvtTe6Wm24BPeCRP4vR7DP', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
+      { id: '1JwbZrWjK6Ez7h66O0CHexa8tlK_3wogl', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
     ]
   }),
   mounted() {

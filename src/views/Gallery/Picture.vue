@@ -17,8 +17,11 @@
                             <div class="col d-flex description-cont">
                                 <div class="description ps-lg-5 pe-0">
                                     <h3 class="mb-5">{{item.title}}</h3>
-                                    <p v-for="text in item.sizes" :key="text">{{text}}</p>
-                                    <p class="mt-5"><i>*El tamaño varía de acuerdo a las necesidades del cliente. Para tener más información comunicarse al +51 959856919 o enviar un mensaje de WhatsApp.</i></p>
+                                    <p>Los trabajos son repujados en láminas de cobre, aluminio y bronce de acuerdo a la medida acordada.</p>
+                                    <p>El trabajo acabado será entregado con un marco o moldura de madera, cuyas proporciones serán de acuerdo a la medidas del cuadro.</p>
+                                    <p>Por otro lado también incluye un paspatour o remarco interior al marco o moldura, este será en cuero o texturado en madera.</p>
+                                    <p class="mt-5" style="font-size: 10px"><i>*El tamaño varía de acuerdo a las necesidades del cliente. Para tener más información comunicarse al +51 959856919 o enviar un mensaje de WhatsApp.</i></p>
+                                    <p style="font-size: 10px"><i>*El marco queda a consideración del cliente, de acuerdo al tipo de marco o color</i></p>
                                 </div>
                             </div>
                         </div>
@@ -168,8 +171,5 @@ export default {
         margin: auto 0;
         padding-top: 3rem;
     }
-}
-@media (max-width: 768px){
-    
 }
 </style>
