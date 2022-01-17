@@ -1,26 +1,42 @@
 <template>
     <header class="px-2 text-white">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
+            <div class="container-fluid accordion" id="navbarContainer">
                 <router-link to="/" class="navbar-brand" href="#">
                     <LogoIcon />
                 </router-link>
-                <div class="navbar-brand navbar-gallery">
-                    <GallerySide class="d-sm-none" />
+                <div v-if="onGalleryRoute" class="navbar-brand navbar-gallery d-sm-none">
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarGallery" aria-controls="navbarGallery" aria-expanded="false" aria-label="Toggle categories">
+                        <GallerySide />
+                    </button>
                 </div>
-                <button class="navbar-toggler menu-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <div v-else class="navbar-brand navbar-gallery">
+                    <GallerySide class="d-sm-none"/>
+                </div>
+                <button class="navbar-toggler menu-button collapsed" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-menu">
                         <span></span>
                         <span></span>
                         <span></span>
                     </span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarText">
+                <div class="collapse navbar-collapse" id="navbarText" data-parent="#navbarContainer">
                     <ul class="navbar-nav me-auto my-md-5 my-lg-0">
-                        <li class="nav-item"><router-link to="/" class="nav-link mx-3 text-white">Inicio</router-link></li>
-                        <li class="nav-item"><router-link to="/about" class="nav-link mx-3 text-white">La Marca</router-link></li>
-                        <li class="nav-item"><a href="#" class="nav-link disable mx-3 text-white">Aprende</a></li>
-                        <li class="nav-item"><router-link to="/contact" class="nav-link mx-3 text-white">Contacto</router-link></li>
+                        <li class="nav-item"><router-link to="/" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Inicio</router-link></li>
+                        <li class="nav-item"><router-link to="/about" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">La Marca</router-link></li>
+                        <li class="nav-item"><a href="#" class="nav-link disable mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Aprende</a></li>
+                        <li class="nav-item"><router-link to="/contact" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Contacto</router-link></li>
+                    </ul>
+                    <span class="navbar-text text-white text-center">
+                        <a href="https://www.facebook.com/pages/category/Arts---Crafts-Store/Metal-Art-433001477462190/" target="_blank"><FacebookSimpleIcon /></a>
+                        <a href="https://wa.link/go0slp" target="_blank"><WhatsappSimpleIcon /></a>
+                    </span>
+                </div>
+                <div v-if="isResponsive" class="collapse navbar-collapse" id="navbarGallery" data-parent="#navbarContainer">
+                    <ul class="navbar-nav me-auto my-md-5 my-lg-0">
+                        <li class="nav-item"><router-link to="/gallery/cult" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Cultural</router-link></li>
+                        <li class="nav-item"><router-link to="/gallery/reli" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Religioso</router-link></li>
+                        <li class="nav-item"><router-link to="/gallery/cust" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Personalizado</router-link></li>
                     </ul>
                     <span class="navbar-text text-white text-center">
                         <a href="https://www.facebook.com/pages/category/Arts---Crafts-Store/Metal-Art-433001477462190/" target="_blank"><FacebookSimpleIcon /></a>
@@ -47,18 +63,27 @@ export default {
     WhatsappSimpleIcon,
     GallerySide
   },
-  data (){
-    return {
-        collapsed: false
-    }
+  data: () => ({
+    width: document.documentElement.clientWidth,
+    height: document.documentElement.clientHeight
+  }),
+  created() {
+    window.addEventListener("resize", this.getDimensions);
   },
   methods: {
-    toggleClass: function(){
-     
-      this.collapsed = !this.collapsed;
-
+    getDimensions() {
+      this.width = document.documentElement.clientWidth;
+      this.height = document.documentElement.clientHeight;
     }
   },
+  computed: {
+    onGalleryRoute() {
+        return this.$route.name === 'Gallery'
+    },
+    isResponsive() {
+        return this.width <= 576
+    }
+  }
 }
 </script>
 
@@ -208,7 +233,7 @@ a svg{
     height: 6px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.9px) {
     header{
         position: fixed;
         background-color: black;

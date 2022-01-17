@@ -1,11 +1,11 @@
 <template>
     <div class="galeria-side-container">
         <div class="galeria-side bg-dark p-3">
-            <router-link to="/gallery">
+            <router-link :to="setLink()">
                 <span class="mx-2">GALERÍA</span>
                 <span class="cuadrado mx-2">
                     <span class="p-1">
-                        <span class="cuadrado-movil"></span><span class="cuadrado-movil"></span>
+                        <span class="cuadrado-movil" /><span class="cuadrado-movil" />
                     </span>
                 </span>
             </router-link>
@@ -16,6 +16,14 @@
 <script>
 export default {
   name: 'GallerySide',
+  methods: {
+    setLink() {
+        if (this.$route.name !== 'Gallery') {
+            return "/gallery";
+        }
+        return "";
+    }
+  }
 }
 </script>
 
@@ -23,30 +31,31 @@ export default {
 .galeria-side-container{
     position: sticky;
     z-index: 999;
-    top: calc(100% - 55px);
+    top: calc(100% - 69px);
 }
 .galeria-side{
     width: fit-content;
-    transform: rotate(-90deg) translate(45px, -46px);
+    transform: rotate(-90deg) translate(45px, -61px);
 }
 .galeria-side a{
     display: flex;
     text-decoration: none;
     color: white;
+    font-size: 24px;
 }
 .cuadrado{
     display: inline-flex;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin: auto;
-    line-height: 16px;
+    line-height: 24px;
     overflow: hidden;
 }
 .cuadrado>span{
-    width: 20px;
+    width: 100%;
     display: flex;
-    border: 2px solid #fff; 
     position: relative;
+    border: 2px solid #fff;
 }
 .cuadrado-movil{
     width: calc(100% - .5rem); 

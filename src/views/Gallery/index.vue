@@ -3,10 +3,10 @@
     <Banner title='GALERÍA'>
       <img src="@/assets/img/Enmascarar_grupo_15.jpg">
     </Banner>
-    <!-- shows gallery by cat -->
+    <!-- shows gallery by cat
     <div class="container-fluid bg-dark" v-if="$route.params.cat">
       <Slider/>
-    </div>
+    </div> -->
     <!-- shows when no cat param exists -->
     <div class="container-fluid" v-if="width >= 576">
       <First class="category-nav">
@@ -46,7 +46,6 @@
 <script>
 // @ is an alias to /src
 import Banner from '@/components/Banner'
-import Slider from '@/views/Gallery/Slider'
 import First from '@/components/First'
 import GalleryPicture from './Picture'
 
@@ -54,7 +53,6 @@ export default {
   name: 'Gallery',
   components: {
     Banner,
-    Slider,
     First,
     GalleryPicture
   },
@@ -147,12 +145,18 @@ export default {
       { id: '1JwbZrWjK6Ez7h66O0CHexa8tlK_3wogl', title: 'Título', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
     ]
   }),
+  watch: {
+    '$route' () {
+      this.setPicturesArray(this.$route.params.cat || 'cult'),
+      this.setColumns()
+    }
+  },
   mounted() {
     document.title = 'Metal Art | Galería'
   },
   created() {
     window.addEventListener("resize", this.getDimensions),
-    this.setPicturesArray('cult'),
+    this.setPicturesArray(this.$route.params.cat || 'cult'),
     this.setColumns()
   },
   methods: {
@@ -212,6 +216,11 @@ export default {
       }
       return result;
     }
+  },
+  computed(){
+    //this.setPicturesArray(this.$route.params.cat || 'cult'),
+    //this.setColumns()
+    console.log(this.$route.params)
   }
 }
 </script>
@@ -293,6 +302,11 @@ export default {
   color: white;
 }
 
+@media (max-width: 991.9px){
+  .main{
+    margin-top: -80px;
+  }
+}
 @media (min-width: 576px){
   .main >.container-fluid{
     margin-top: 0px;

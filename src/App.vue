@@ -66,7 +66,7 @@ export default {
 }
 
 .main{
-  margin-top: -168px;
+  margin-top: -180px;
   overflow: hidden;
 }
 
@@ -132,6 +132,11 @@ li{
   transition: all 0.3s ease-in;
 }
 
+@media (max-width: 991.9px){
+  .main{
+    margin-top: -140px;
+  }
+}
 @media (max-width: 576px){
   .main {
     margin-top: 0 !important;
