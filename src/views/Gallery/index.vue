@@ -259,7 +259,7 @@ export default {
 }
 
 .category-nav{
-  padding: 0;
+  padding: 0 !important;
 }
 .category-nav ul{
   position: relative;
