@@ -21,10 +21,15 @@
             </div>
         </div>
         <div class="row" style="margin: -1px">
-            <div class="my-col col-sm-5 no-available">
+            <div class="my-col col-sm-5">
                 <img src="..\assets\img\Enmascarar_grupo_21.jpg">
-                <div class="darken-bg no-available">
+                <!--<div class="darken-bg no-available">
                     <h3 class="center">APRENDE <br/><span class="coming-soon">(DISPONIBLE PRONTO)</span></h3>
+                </div>-->
+                <div class="darken-bg">
+                    <router-link to="/learn">
+                        <h3 class="center">APRENDE</h3>
+                    </router-link>
                 </div>
             </div>
             <div class="my-col col-sm">

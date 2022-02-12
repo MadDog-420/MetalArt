@@ -24,7 +24,7 @@
                     <ul class="navbar-nav me-auto my-md-5 my-lg-0">
                         <li class="nav-item"><router-link to="/" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Inicio</router-link></li>
                         <li class="nav-item"><router-link to="/about" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">La Marca</router-link></li>
-                        <li class="nav-item"><a href="#" class="nav-link disable mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Aprende</a></li>
+                        <li class="nav-item"><router-link to="/learn" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Aprende</router-link></li>
                         <li class="nav-item"><router-link to="/contact" class="nav-link mx-3 text-white" data-toggle="collapse" data-target=".navbar-collapse.show">Contacto</router-link></li>
                     </ul>
                     <span class="navbar-text text-white text-center">
