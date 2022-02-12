@@ -18,11 +18,21 @@
               <h4 class="mt-md-auto subtitle">INSTRUCTOR</h4>
             </div>
             <div class="d-flex flex-column my-auto ms-auto">
-              <button type="button" class="btn btn-outline-dark">Inscríbete gratis</button>
+              <button type="button" class="btn btn-outline-dark inscription-button">Inscríbete gratis</button>
             </div>
           </div>
           <div class="my-col col-12 ps-md-3 video-container">
-            <img src="..\assets\img\la-marca-2-f.jpg">
+            <div class="w-100 d-flex justify-content-center">
+              <div @click="playVideo($event.target)" class="play-button" v-bind:class = "(videoIsPlaying)?'no-play':''">
+                <video name="media-video" width="360">
+                  <source
+                    src="..\assets\video\learn_video.mp4"
+                    type="video/mp4">
+                </video>
+                <img src="..\assets\img\play.png">
+              </div>
+              <!--<iframe src="https://drive.google.com/file/d/1T2UDAEXMSVD0xcbrF0AS-hdAQa4z_IOH/preview" width="640" height="360" allow="autoplay"></iframe>-->
+            </div>
           </div>
           <div class="my-col col-12 ps-md-3">
             <div class="col-md-7 d-flex flex-column">
@@ -69,9 +79,17 @@
           </div>
         </div>
       </First>
-      <div class="sub-gallery-container py-5 px-4">
+      <div class="sub-gallery-container pb-5 px-4">
         <div class="row sub-gallery">
-          <div class="col-6"><h3 class="text-center mt-4 pb-4">Aprende una nueva habilidad</h3></div>
+          <div class="col col-6">
+            <img class="inscription-img responsive-img" src="..\assets\img\herramienta_repujado.png">
+          </div>
+          <div class="col-6 d-flex">
+            <div class="m-auto" style="height: fit-content;">
+              <h3 class="text-center mt-4 pb-4" style="width: fit-content">Aprende una nueva habilidad</h3>
+              <button type="button" class="btn btn-dark inscription-button">Inscríbete gratis</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -89,9 +107,28 @@ export default {
     Banner,
     First
   },
+  data: ()=> ({
+    videoIsPlaying: false
+  }),
+  watch: {
+    videoIsPlaying () {
+      console.log('video change');
+    }
+  },
   mounted() {
     document.title = 'Metal Art | La Marca'
   },
+  methods: {
+    playVideo(){
+      if (!this.videoIsPlaying) {
+        this.videoIsPlaying = true;
+        document.getElementsByName('media-video')[0].play();
+      } else {
+        this.videoIsPlaying = false;
+        document.getElementsByName('media-video')[0].pause();
+      }
+    }
+  }
 }
 </script>
 
@@ -116,7 +153,7 @@ export default {
 }
 .sub-gallery{
   max-width: 80%;
-  margin: 30px auto;
+  margin: auto;
 }
 .instructor-card .subtitle{
   color: #A1A1A1;
@@ -128,14 +165,36 @@ export default {
   border-radius: 50%;
   object-fit: cover;
 }
-.instructor-card .btn-outline-dark{
+.inscription-button{
   font-size: 2.5em;
   border-width: 3px;
   padding: .5rem 2rem;
 }
 .video-container{
-  max-height: 694px;
+  position: relative;
   overflow: hidden;
+}
+.play-button{
+  position: relative;
+  min-height: 640px;
+  cursor: pointer;
+}
+.play-button img{
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+}
+.play-button.no-play img{
+  opacity: 0;
+}
+.play-button img:hover{
+  opacity: 0.99;
+}
+.play-button.no-play img:hover{
+  opacity: 0;
 }
 .features{
   padding: 2rem;
@@ -164,6 +223,10 @@ export default {
   width: 227px;
   height: 227px;
 }
+.responsive-img{
+  width: 100%;
+}
+.inscription-img{}
 
 @media (max-width: 1232px) {
   .sub-gallery{
