@@ -6,16 +6,13 @@
     <div class="container-fluid">
       <First>
         <div class="row">
-          <div class="col-12 py-2">
+          <div class="col-6 py-5">
             <h4 class="text-center">CORREO</h4>
-            <h4 class="text-center"><a href="mailto:henry.paz.arte@hotmail.com">henry.paz.arte@hotmail.com</a></h4>
+            <h4 class="text-center mt-5"><a href="mailto:henry.paz.arte@hotmail.com" style="font-weight: normal;">henry.paz.arte@hotmail.com</a></h4>
           </div>
-          <div class="col-12 py-2 mt-5">
+          <div class="col-6 py-5">
             <h4 class="text-center">CELULAR - WHATSAPP</h4>
-            <h4 class="text-center">+51 959856919</h4>
-          </div>
-          <div class="col-12 py-2 mt-5">
-            <h2 class="text-center">Detalle, Pasión y Compromiso</h2>
+            <h4 class="text-center mt-5" style="font-weight: normal;">+51 959856919</h4>
           </div>
         </div>
       </First>
@@ -48,6 +45,14 @@ export default {
 }
 .about img{
   background-color: rgba(81,81,81,1);
+}
+a{
+  color: unset;
+  text-decoration: none;
+}
+a:hover{
+  color: #0d6efd;
+  text-decoration: underline; 
 }
 
 @media (max-width: 576px){

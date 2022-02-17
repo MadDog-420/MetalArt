@@ -14,8 +14,8 @@
           <div class="my-col col-12 ps-md-3 instructor-card">
             <img class="profile-picture" src="..\assets\img\la-marca-1-f.jpg">
             <div class="d-flex flex-column">
-              <h3 class="mt-md-auto">Henry Pedro Paz Huamán</h3>
-              <h4 class="mt-md-auto subtitle">INSTRUCTOR</h4>
+              <h3 class="mt-md-auto mt-auto mb-0" style="font-weight: normal;">Henry Pedro Paz Huamán</h3>
+              <h4 class="mt-md-auto subtitle mb-auto" style="font-weight: normal;">INSTRUCTOR</h4>
             </div>
             <div class="d-flex flex-column my-auto ms-auto inscription-button-container">
               <button type="button" class="btn btn-outline-dark inscription-button" @click="goInscription()">Inscríbete gratis</button>
@@ -24,12 +24,19 @@
           <div class="my-col col-12 ps-md-3 video-container">
             <div class="w-100 d-flex justify-content-center">
               <div @click="playVideo($event.target)" class="play-button" v-bind:class = "(videoIsPlaying)?'no-play':''">
-                <video name="media-video" width="360">
+                <video class="video" name="media-video" width="360">
                   <source
                     src="..\assets\video\learn_video.mp4"
                     type="video/mp4">
                 </video>
-                <img src="..\assets\img\play.png">
+                <div class="blur">
+                  <video name="media-video" style="width: 100%; margin-top: -50%" muted>
+                    <source
+                      src="..\assets\video\learn_video.mp4"
+                      type="video/mp4">
+                  </video>
+                </div>
+                <img src="..\assets\img\play.png" class="invert">
               </div>
               <!--<iframe src="https://drive.google.com/file/d/1T2UDAEXMSVD0xcbrF0AS-hdAQa4z_IOH/preview" width="640" height="360" allow="autoplay"></iframe>-->
             </div>
@@ -86,7 +93,7 @@
               <h3 class="mb-md-4">Instructor</h3>
               <img class="profile-picture" src="..\assets\img\la-marca-1-f.jpg">
             </div>
-            <div class="d-flex flex-column my-auto pt-4 pt-md-0">
+            <div class="d-flex flex-column my-auto pt-5 pt-md-0 pt-lg-5">
               <h3>Henry Pedro Paz Huamán</h3>
               <p>Artesano en repujado sobre metal</p>
             </div>
@@ -130,16 +137,21 @@ export default {
     }
   },
   mounted() {
-    document.title = 'Metal Art | La Marca'
+    document.title = 'Metal Art | Aprende'
   },
   methods: {
     playVideo(){
       if (!this.videoIsPlaying) {
         this.videoIsPlaying = true;
-        document.getElementsByName('media-video')[0].play();
+        document.getElementsByName('media-video').forEach((elm) => {
+          elm.play();
+        });
+        console.log(document.getElementsByName('media-video')[0]);
       } else {
         this.videoIsPlaying = false;
-        document.getElementsByName('media-video')[0].pause();
+        document.getElementsByName('media-video').forEach((elm) => {
+          elm.pause();
+        });
       }
     },
     goInscription(){
@@ -184,7 +196,7 @@ export default {
   object-position: top;
 }
 .inscription-button{
-  font-size: 2.5em;
+  font-size: 2.3em;
   border-width: 3px;
   padding: .5rem 2rem;
 }
@@ -193,8 +205,9 @@ export default {
   overflow: hidden;
 }
 .play-button{
+  width: 100%;
   position: relative;
-  min-height: 640px;
+  max-height: 640px;
   cursor: pointer;
 }
 .play-button img{
@@ -204,6 +217,19 @@ export default {
   left: 50%;
   opacity: 0.8;
   transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.play-button .video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+.blur{
+  width: 100%;
+  filter: blur(16px);
+  overflow: hidden;
 }
 .play-button.no-play img{
   opacity: 0;
@@ -242,6 +268,9 @@ export default {
 }
 .responsive-img{
   width: 100%;
+}
+.invert { 
+  filter: invert(100%);
 }
 
 @media (max-width: 1232px) {
