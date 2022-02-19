@@ -65,7 +65,6 @@ export default {
     items_2: [],
     items_3: [],
     cult: [
-      { id: '1O72Fz6u9ergaJb-hSCZE9fdi5KzSoaIt', title: 'Máscara', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '1qBh7viEosa1xODuAgnCKFsGuI9zyxGm8', title: 'Belleza azteca', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '1Sens-kQWpAeAvPlqdbLUdHlcKv288qQ1', title: 'Marinera norteña (Perú)', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
       { id: '12gZAx8N43Utx80sO6e8KOn87fiDmYnuQ', title: 'Niña de Chivay', sizes: ['COBRE: Máximo 80 cm de alto.', 'ALUMINIO: Máximo 60 cm de alto.', 'BRONCE: Máximo 30 cm de alto.']},
