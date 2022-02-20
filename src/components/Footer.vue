@@ -17,10 +17,10 @@
                 </ul>
             </div>
             <div class="col col-12 col-sm-5 px-4 py-5 border-bottom">
-                <ul class="justify-content-between">
+                <ul>
                     <li>+51 959856919</li>
                     <li>henry.paz.arte@gmail.com</li>
-                    <li>Calle Ampatacocha 217<br>Yanahuara - Arequipa - Perú</li>
+                    <li><a href="https://www.facebook.com/Metal-Art-433001477462190/">Visitanos en Facebook como Metal Art</a></li>
                 </ul>
             </div>
             <div class="col col-12 d-sm-none pt-4">
@@ -39,6 +39,9 @@ export default {
 <style scoped>
 *{
     color: white;
+}
+a{
+    text-decoration: none;
 }
 .col svg{
     fill:#fff;

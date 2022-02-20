@@ -85,6 +85,7 @@ export default {
     object-fit: contain;
     margin: auto;
     z-index: 99;
+    cursor: pointer;
 }
 .no-image{
     background-color: rgba(81,81,81,1);
@@ -137,7 +138,9 @@ export default {
     width: 1.5rem;
     height: 1.5rem;
     right: 30px;
-    filter: brightness(0) invert(1);
+    filter: brightness(1) invert(1);
+    background-size: contain;
+    opacity: 1;
 }
 .modal-content p, .modal-content h3{
     color: white;

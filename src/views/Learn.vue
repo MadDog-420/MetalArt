@@ -12,7 +12,7 @@
             </div>
           </div>
           <div class="my-col col-12 ps-md-3 instructor-card">
-            <img class="profile-picture" src="..\assets\img\la-marca-1-f.jpg">
+            <img class="profile-picture" src="..\assets\img\profile_picture.png">
             <div class="d-flex flex-column">
               <h3 class="mt-md-auto mt-auto mb-0" style="font-weight: normal;">Henry Pedro Paz Huamán</h3>
               <h4 class="mt-md-auto subtitle mb-auto" style="font-weight: normal;">INSTRUCTOR</h4>
@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="my-col col-12 ps-md-3 video-container">
-            <div class="w-100 d-flex justify-content-center">
+            <div class="w-100 d-flex justify-content-center" style="overflow: hidden">
               <div @click="playVideo($event.target)" class="play-button" v-bind:class = "(videoIsPlaying)?'no-play':''">
                 <video class="video" name="media-video" width="360">
                   <source
@@ -43,17 +43,17 @@
           </div>
           <div class="my-col col-12 ps-md-3">
             <div class="row">
-              <div class="col pe-md-3 d-flex flex-column course-description-container">
+              <div class="col col-12 col-md-6 col-sm-12 col-xl-8 pe-md-5 d-flex flex-column course-description-container">
                 <h3 class="mb-md-3">A cerca de este curso</h3>
-                <p class="ms-md-0 mt-2 mb-md-auto text-justify">Este curso provee una vista general de los conceptos, principios y practicas fundamentales del repujado en metal. Con ejercicios interactivos se ayuda a los estudiantes a explorar sus propias actitudes, hábitos mentales, comportamientos y sentimientos a través del metal. El curso de taller de repujado ofrece un camino hacia el mundo artesanal de la orfebrería abordándola con autenticidad y variedad. Los principales componentes de este curso incluyen ejercicios prácticos, uso profesional de herramientas artesanales, guias de referencias, asesoría personal y discusiones interactivas.</p>
+                <p class="ms-md-0 mt-2 mb-md-auto">Este curso provee una vista general de los conceptos, principios y practicas fundamentales del repujado en metal. Con ejercicios interactivos se ayuda a los estudiantes a explorar sus propias actitudes, hábitos mentales, comportamientos y sentimientos a través del metal. El curso de taller de repujado ofrece un camino hacia el mundo artesanal de la orfebrería abordándola con autenticidad y variedad. Los principales componentes de este curso incluyen ejercicios prácticos, uso profesional de herramientas artesanales, guias de referencias, asesoría personal y discusiones interactivas.</p>
               </div>
-              <div class="col d-flex flex-column ms-auto features-conatiner">
-                <div class="features">
+              <div class="col col-12 mt-4 mt-md-0 col-md-6 col-sm-12 col-xl-4 d-flex flex-column features-conatiner">
+                <div class="features ms-3">
                   <ul>
                     <li>
                       <div class="row w-100">
-                        <div class="col-3 col-md-4 col-xl-3">
-                          <span class="circle-list"></span>
+                        <div class="d-flex icon-container col-3 col-md-4 col-xl-3">
+                          <CalendarIcon />
                         </div>
                         <div class="col">
                           <h4>Fechas flexibles</h4>
@@ -63,19 +63,8 @@
                     </li>
                     <li>
                       <div class="row w-100">
-                        <div class="col-3 col-md-4 col-xl-3">
-                          <span class="circle-list"></span>
-                        </div>
-                        <div class="col">
-                          <h4>Certificado para compartir</h4>
-                          <p>Obten un certificado al finalizar.</p>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="row w-100">
-                        <div class="col-3 col-md-4 col-xl-3">
-                          <span class="circle-list"></span>
+                        <div class="d-flex icon-container col-3 col-md-4 col-xl-3">
+                          <VirtualIcon />
                         </div>
                         <div class="col">
                           <h4>100% en línea</h4>
@@ -89,13 +78,17 @@
             </div>
           </div>
           <div class="my-col col-12 ps-md-3 instructor-info">
-            <div class="d-flex flex-column">
-              <h3 class="mb-md-4">Instructor</h3>
-              <img class="profile-picture" src="..\assets\img\la-marca-1-f.jpg">
-            </div>
-            <div class="d-flex flex-column my-auto pt-5 pt-md-0 pt-lg-5">
-              <h3>Henry Pedro Paz Huamán</h3>
-              <p>Artesano en repujado sobre metal</p>
+            <div class="w-100 row">
+              <div class="col col-12 mb-3">
+                <h3 class="mb-md-4">Instructor</h3>
+              </div>
+              <div class="me-3 instructor-picture-container">
+                <img class="profile-picture" style="width: 100%; height: unset" src="..\assets\img\profile_picture.png">
+              </div>
+              <div class="col d-flex flex-column my-auto">
+                <h3 class="name">Henry Pedro Paz Huamán</h3>
+                <p>Artesano en repujado sobre metal</p>
+              </div>
             </div>
           </div>
         </div>
@@ -121,12 +114,16 @@
 // @ is an alias to /src
 import Banner from '@/components/Banner.vue'
 import First from '@/components/First.vue'
+import CalendarIcon from '@/components/icons/CalendarIcon.vue'
+import VirtualIcon from '@/components/icons/VirtualIcon.vue'
 
 export default {
   name: 'About',
   components: {
     Banner,
-    First
+    First,
+    CalendarIcon,
+    VirtualIcon
   },
   data: ()=> ({
     videoIsPlaying: false
@@ -155,7 +152,7 @@ export default {
       }
     },
     goInscription(){
-      window.open('https://api.whatsapp.com/send?phone=959856919&text=Hola👋,%20me%20gustar%C3%ADa%20inscribirme%20en%20el%20curso%20de%20repujado', '_blank');
+      window.open('https://api.whatsapp.com/send?phone=51959856919&text=Hola👋,%20me%20gustar%C3%ADa%20inscribirme%20en%20el%20curso%20de%20repujado', '_blank');
     }
   }
 }
@@ -188,16 +185,15 @@ export default {
   color: #A1A1A1;
 }
 .profile-picture{
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   margin: 0 2.5rem 0 0;
-  border-radius: 50%;
   object-fit: cover;
-  object-position: top;
 }
 .inscription-button{
   font-size: 2.3em;
   border-width: 3px;
+  border-color: black !important;
   padding: .5rem 2rem;
 }
 .video-container{
@@ -240,11 +236,8 @@ export default {
 .play-button.no-play img:hover{
   opacity: 0;
 }
-.features-conatiner{
-  width: 330px;
-}
 .features{
-  padding: 2rem;
+  padding: 1rem;
   background-color: #F5F5F5;
 }
 .features ul{
@@ -262,7 +255,7 @@ export default {
   border: 1px solid #000;
   border-radius: 50%;
 }
-.instructor-info .profile-picture{
+.instructor-picture-container{
   width: 227px;
   height: 227px;
 }
@@ -271,6 +264,12 @@ export default {
 }
 .invert { 
   filter: invert(100%);
+}
+.icon-container svg{
+  margin: 0 auto;
+}
+.btn-dark{
+  background-color: black !important;
 }
 
 @media (max-width: 1232px) {
@@ -299,9 +298,8 @@ export default {
   .course-description-container{
     flex: unset;
   }
-  .features-conatiner{
-    width: 100%;
-    margin-top: 2rem;
+  .features{
+    margin-left: 0 !important;
   }
 }
 @media (max-width: 768px){
@@ -326,6 +324,9 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  .features-conatiner{
+    width: 100%;
+  }
 }
 @media (max-width: 576px){
   p {
@@ -346,8 +347,8 @@ export default {
   .instructor-card h3{
     font-size: unset;
   }
-  .instructor-card h4{
-    font-size: unset;
+  .instructor-card .subtitle{
+    font-size: .8rem;
   }
   .profile-picture{
     width: 50px;
@@ -367,9 +368,20 @@ export default {
     padding-right: 0;
     padding-left: 0;
   }
-  .instructor-info .profile-picture{
-    width: 113.5px;
-    height: 113.5px;
+  .instructor-picture-container{
+    width: 95px;
+    height: 95px;
+    display: flex;
+    padding-right: 0;
+  }
+  .instructor-picture-container img{
+    margin: auto 0;
+  }
+  .instructor-info .name, .instructor-info p{
+    margin: 0 !important;
+  }
+  .instructor-info .name{
+    font-size: 1.1rem;
   }
 }
 </style>
