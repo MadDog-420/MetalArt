@@ -87,7 +87,7 @@
               </div>
               <div class="col d-flex flex-column my-auto">
                 <h3 class="name">Henry Pedro Paz Huamán</h3>
-                <p>Artesano en repujado sobre metal</p>
+                <p>Artista en repujado sobre metal</p>
               </div>
             </div>
           </div>
