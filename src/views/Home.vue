@@ -44,7 +44,7 @@
         <footer class="page-footer bg-dark text-white container-fluid p-5">
           <div class="row">
               <div class="col text-center">
-                  <copyright><p class="text-center">Copyright &copy; 2021</p></copyright>
+                  <copyright><p class="text-center">Copyright &copy; 2022</p></copyright>
               </div>
           </div>
         </footer>
